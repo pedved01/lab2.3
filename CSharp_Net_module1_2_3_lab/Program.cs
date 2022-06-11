@@ -16,15 +16,18 @@ namespace CSharp_Net_module1_2_3_lab
 
            
             // 11) do operations
-            // add 2 objects of Money
 
+            // add 2 objects of Money
+           Money money3 = money1 + money2;
             // add 1st object of Money and double
 
             // decrease 2nd object of Money by 1 
-
+            money2--;
             // increase 1st object of Money
 
             // compare 2 objects of Money
+            bool money4 = money1 < money2;
+            bool money5 = money1 > money2;
 
             // compare 2nd object of Money and string
 

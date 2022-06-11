@@ -40,7 +40,8 @@ namespace CSharp_Net_module1_2_3_lab
         // 5) declare overloading of operator -- to decrease object of Money by 1
         public static Money operator --(Money amount)
         {
-            return new Money { Amount = amount.Amount - 1 };
+            amount.Amount--;
+            return amount;  
         }
 
         // 6) declare overloading of operator * to increase object of Money 3 times
@@ -66,14 +67,14 @@ namespace CSharp_Net_module1_2_3_lab
         }
 
         // 8) declare overloading of operator true and false to check CurrencyType of object
-        public static Money operator true(Money CurrencyType)
-        {
+        //public static Money operator true(Money CurrencyType)
+        //{
           
-        }
-        public static bool operator false(Money CurrencyType)
-        {
+        //}
+        //public static bool operator false(Money CurrencyType)
+        //{
           
-        }
+        //}
 
 
 
