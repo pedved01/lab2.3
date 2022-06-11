@@ -68,20 +68,11 @@ namespace CSharp_Net_module1_2_3_lab
         // 8) declare overloading of operator true and false to check CurrencyType of object
         public static Money operator true(Money CurrencyType)
         {
-            if (CurrencyType.CurrencyType == CurrencyTypes.UAH)
-                return new Money { CurrencyType = CurrencyTypes.UAH };
-            else if (CurrencyType.CurrencyType == CurrencyTypes.USD)
-                return new Money { CurrencyType = CurrencyTypes.USD };
-            else 
-                return new Money { CurrencyType = CurrencyTypes.EU };
+          
         }
         public static bool operator false(Money CurrencyType)
         {
-            if (CurrencyType.CurrencyType == CurrencyTypes.UAH)
-                return false;
-            else if (CurrencyType.CurrencyType == CurrencyTypes.USD)
-                return false;
-            return false;
+          
         }
 
 
