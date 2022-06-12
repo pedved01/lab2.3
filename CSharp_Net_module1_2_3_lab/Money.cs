@@ -26,7 +26,6 @@ namespace CSharp_Net_module1_2_3_lab
             this.Amount = Amount;
             this.CurrencyType = CurrencyType;
         }
-
         // 4) declare overloading of operator + to add 2 objects of Money
         public static Money operator +(Money amount1, Money amount2)
         {
@@ -41,7 +40,7 @@ namespace CSharp_Net_module1_2_3_lab
         public static Money operator --(Money amount)
         {
             amount.Amount--;
-            return amount;  
+            return amount;
         }
 
         // 6) declare overloading of operator * to increase object of Money 3 times
@@ -53,42 +52,40 @@ namespace CSharp_Net_module1_2_3_lab
         // 7) declare overloading of operator > and < 2 objects of Money
         public static bool operator <(Money amount1, Money amount2)
         {
-            if (amount1.CurrencyType == amount2.CurrencyType && amount1.Amount < amount1.Amount)
+            if (amount1.CurrencyType == amount2.CurrencyType && amount1.Amount < amount2.Amount)
                 return true;
             else
                 return false;
         }
         public static bool operator >(Money amount1, Money amount2)
         {
-            if (amount1.CurrencyType == amount2.CurrencyType && amount1.Amount > amount1.Amount)
+            if (amount1.CurrencyType == amount2.CurrencyType && amount1.Amount > amount2.Amount)
                 return true;
             else
                 return false;
         }
 
         // 8) declare overloading of operator true and false to check CurrencyType of object
-        //public static Money operator true(Money CurrencyType)
-        //{
-          
-        //}
-        //public static bool operator false(Money CurrencyType)
-        //{
-          
-        //}
-
-
-
+        public static bool operator true(Money type)
+        {
+            if (type.CurrencyType == CurrencyTypes.EU)
+                return true;
+            else
+                return false;
+        }
+        public static bool operator false(Money type)
+        {
+            if (type.CurrencyType != CurrencyTypes.EU)
+                return true;
+            else
+                return false;
+        }
         // 9) declare overloading of implicit/ explicit conversion  to convert Money to double, string and vice versa
+      
 
 
 
-        //public int ConverterToUAH(CurrencyTypes value)
-        //{
 
-        //  if (value == CurrencyTypes.USD)
-        //        return Amount = value / 30;
-
-        //}  
 
     }
 }
